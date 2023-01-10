@@ -12,111 +12,66 @@ font-family: 'Italiana', serif;
 
 */
 
-nav{
+/* comun */
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    justify-content:space-evenly;
     width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 10vh;
-    background-color: #000000;
     font-family: 'Italiana', serif;
+    font-weight: 700;
+    font-size: 36px;
+    font-style: normal;
+    text-align: center;
 }
 
-.logo{
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size:22px;
-}
-
-.nav-links{
-    display: flex;
-    justify-content: space-around;
-    width: 35%;
-}
-
-.nav-links li{
-    list-style:none;
-    
-}
-.nav-links a{
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    letter-spacing: 3px;
-    font-weight:bold;
-    font-size:36px;
-}
-
-.burger{
-    display:none;
-    cursor: pointer;
-}
-
-.burger div{
-    width:25px;
-    height:3px;
-    background-color:#fff;
-    margin: 5px;
-    transition: all 0.3s ease
-    
-}
-
-@media screen and (max-width:1024px){
-    .nav-links{
-    width:60%;
-    }
-}
-
-@media screen and (max-width:768px){
-    body{
-    overflow-x: hidden;
-    }
-    .nav-links{
-    position:absolute;
-    right:0px;
-    height:92vh;
-    top: 8vh;
-    background-color:rgb(0, 0, 0);
-    display:flex;
-    flex-direction: column;  
+.logo {
     align-items: center;
-    width:50%;
-    transform: translateX(100%);
-    transition: transform 0.5s ease-in;
-    }
-    .nav-links li{
-    opacity: 0;
-    }
-    .burger{
-    display:block;
-    }
+    height: 25px;
+    width: 25px;
 }
 
-.nav-active{
-    transform: translateX(0%);
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
 }
 
-@keyframes navLinkFade{
-    from{
-    opacity:0;
-    transform: translateX(50px);
+.nav-menu li {
+    margin-right: 1rem;
+}
+
+.nav-menu li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+  /* responsive */
+@media (max-width: 600px) {
+    .menu-icon {
+    display: block;
     }
-    to{
-    opacity: 1;
-    transform: translateX(0px);
-    }
+
+.nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: #333;
+    width: 100%;
+    top: 50px;
+    left: 0;
+    z-index: 1;
 }
 
-.toggle .line1{
-    transform: rotate(-40deg) translate(-5px,6px);
+.nav-menu.active {
+    display: flex;
 }
 
-.toggle .line2{
-    transform: rotate(90deg) translate(0px,0px);
+.nav-menu li {
+    margin: 0;
+    text-align: center;
 }
-
-.toggle .line3{
-    transform: rotate(35deg) translate(-5px,-6px);
 }
 
 .titulo h1{
@@ -138,6 +93,12 @@ nav{
     align-items: center;
     justify-content: center;
     background-color: black;
+    font-family: 'Italiana', serif;
+    font-weight: 700;
+    font-size: 40px;
+    font-style: normal;
+    text-align: center;
+    color: #fff;
 }
 
 .cuerpo p{
@@ -188,9 +149,98 @@ width: 100%;
     left: 60px;
 }
 
-div.imgSabores img{
+/* grid */
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr repeat(12,minmax(auto, 60px)) 1fr;
+    grid-gap: 40px;
+    padding: 10px;
+}
+
+.tarjeta{
+    grid-column: 2 / span 12;
+    display: grid;
+    grid-template-columns: repeat(12,minmax(auto, 60px));
+    grid-gap: 40px;
+}
+
+.texto-tarjeta{
+    padding: 20px;
+    grid-column-end: span 4;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+
+.imgSabores{
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
     position: relative;
-    margin-left: 700px;
+}
+
+.imgSabores img{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.titulo-tarjeta{
+    margin-bottom: 20px;
+    background-color: black;
+    font-family: 'Italiana', serif;
+    font-weight: 700;
+    font-size: 35px;
+    font-style: normal;
+    text-align: center;
+    padding: 30px;
+    color:white
+}
+
+.info-tarjeta{
+    display: flex;
+    align-self: end;
+    align-items: center;
+    width: 100%;
+    background-color: black;
+    font-family: 'Italiana', serif;
+    font-weight: 600;
+    font-size: 20px;
+    font-style: normal;
+    text-align: center;
+    padding: 20px;
+    color:white
+}
+
+@media only screen and (max-width: 1000px) {
+    .tarjeta {
+        grid-column-end: span 6;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .grid{
+        grid-gap: 20px;
+    }
+    .tarjeta{
+        grid-column-end: span 12;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .grid{
+        grid-template-columns: 10px repeat(6, 1fr) 10px;
+        grid-gap: 10px;
+    }
+
+    .tarjeta{
+        grid-column-end: 2 / span 6;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 20px;
+    }
 }
 
 .lista li{
@@ -210,7 +260,7 @@ div.imgSabores img{
     color:white
 }
 
-
+/* footer */
 
 .social-footer {
     padding: 1rem;
@@ -233,6 +283,11 @@ font-size: 16px;
 color: #fff;
 }
 
+.social-footer img{
+    height: 25px;
+    width: 25px;
+}
+
 .social-footer-icons ul{
     display: flex;
     list-style: none;
@@ -247,13 +302,4 @@ color: #fff;
     margin-right: 0;
 }
 
-.social-footer .social-footer-icons .fa {
-    font-size: 1.3rem;
-    color: #c23d3d;
-}
-
-.social-footer .social-footer-icons .fa:hover {
-    color: #ffffff;
-    transition: color 0.3s ease-in;
-}
 

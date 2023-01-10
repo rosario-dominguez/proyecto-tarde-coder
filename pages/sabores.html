@@ -14,17 +14,18 @@
     <body>
         <header>
             <nav>
-                <ul class="nav-links">
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="../pages/sabores.html">Sabores</a></li>
-                    <li><a href="../pages/eventos.html">Eventos</a></li>
-                    <li><a href="../pages/locales.html">Locales</a></li>
-                    <li><a href="../pages/nosotros.html">Nosotros</a></li>
-                </ul>
-                <div class="burger">
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
+                <div class="navbar"> 
+                        <img class= "logo" src="../assets/img/menu.png" alt="">
+                        <div class="menu-icon" onclick="toggleMenu()">
+                        <i class="fa fa-bars"></i>
+                        </div>
+                    <ul class="nav-menu">
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="../pages/sabores.html">Sabores</a></li>
+                        <li><a href="../pages/eventos.html">Eventos</a></li>
+                        <li><a href="../pages/locales.html">Locales</a></li>
+                        <li><a href="../pages/nosotros.html">Nosotros</a></li>
+                    </ul>
                 </div>
             </nav>
         </header>
@@ -34,37 +35,97 @@
                 <h1>Sabores</h1>
                 <p class = "cuerpo">¡Utilizamos los mejores ingredientes para hacer helado 100% artesanal!</p>
             </section>
-            <section class="container">
-                <div class = "imgSabores">
-                    <img src="../assets/img/vainilla.png" alt="">
-                    <div class = "cuerpo">
-                        <h2 >Vainilla</h2>
-                        <p>Con Vainilla de Magagascar</p>
+            <section class="grid">
+                <div class= "tarjeta">
+                    <div class = "imgSabores">
+                        <img src="../assets/img/vainilla.png" alt="">
+                    </div>                        
+                    <div class = "texto-tarjeta">
+                        <h2 class="titulo-tarjeta">Vainilla</h2>
+                            <div class="info-tarjeta">
+                                <p>Con Vainilla de Madagascar</p>
+                            </div>
                     </div>
                 </div>
-                <div class = "imgSabores">
-                    <img src="../assets/img/bananaSplit.png" alt="">
-                    <div class = "cuerpo">
-                        <h2>Banana Split</h2>
-                        <p>Con dulce de leche tradicional y trocitos de chocolate</p>
+                <div class= "tarjeta">
+                    <div class = "imgSabores">
+                        <img src="../assets/img/bananaSplit.png" alt="">
+                    </div>                        
+                    <div class = "texto-tarjeta">
+                        <h2 class="titulo-tarjeta">Banana Split</h2>
+                            <div class="info-tarjeta">
+                                <p>Con dulce de leche tradicional y trocitos de chocolate</p>
+                            </div>
                     </div>
                 </div>
-                <div class = "imgSabores">
-                    <img src="../assets/img/cocoYddl.png" alt="">
-                    <div class = "cuerpo">
-                        <h2>Coco y Dulce de Leche</h2>
-                        <p>Con coco y dulce de leche tradicional</p>
+                <div class= "tarjeta">
+                    <div class = "imgSabores">
+                        <img src="../assets/img/cocoYddl.png" alt="">
+                    </div>                        
+                    <div class = "texto-tarjeta">
+                        <h2 class="titulo-tarjeta">Coco y Dulce de Leche</h2>
+                            <div class="info-tarjeta">
+                                <p>Con coco y dulce de leche tradicional</p>
+                            </div>
+                    </div>
+                </div>                  
+                <div class= "tarjeta">
+                    <div class = "imgSabores">
+                        <img src="../assets/img/cookiesAndCream.png" alt="">
+                    </div>                        
+                    <div class = "texto-tarjeta">
+                        <h2 class="titulo-tarjeta">Cookies and Cream</h2>
+                            <div class="info-tarjeta">
+                                <p>Crema americana con dulce de leche y Mini Oreos</p>
+                            </div>
+                    </div>
+                </div> 
+                <div class= "tarjeta">
+                    <div class = "imgSabores">
+                        <img src="../assets/img/nocciola.png" alt="">
+                    </div>                        
+                    <div class = "texto-tarjeta">
+                        <h2 class="titulo-tarjeta">Nocciola</h2>
+                            <div class="info-tarjeta">
+                                <p>Con avellanas y crocante de chocolate</p>
+                            </div>
+                    </div>
+                </div> 
+                <div class= "tarjeta">
+                    <div class = "imgSabores">
+                        <img src="../assets/img/menta.png" alt="">
+                    </div>                        
+                    <div class = "texto-tarjeta">
+                        <h2 class="titulo-tarjeta">Menta Granizada</h2>
+                            <div class="info-tarjeta">
+                                <p>Con trocitos de chocolate semiamargo</p>
+                            </div>
+                    </div>
+                </div> 
+                <div class= "tarjeta">
+                    <div class = "imgSabores">
+                        <img src="../assets/img/pistaccio.png" alt="">
+                    </div>                        
+                    <div class = "texto-tarjeta">
+                        <h2 class="titulo-tarjeta">Pistacchio</h2>
+                            <div class="info-tarjeta">
+                                <p>Con pistacchios de Sicilia</p>
+                            </div>
                     </div>
                 </div>
+            </div> 
+            <div class= "tarjeta">
                 <div class = "imgSabores">
-                    <img src="../assets/img/cookiesAndCream.png" alt="">
-                    <div class = "cuerpo">
-                        <h2>Cookies and Cream</h2>
-                        <p>Crema americana con dulce de leche y Mini Oreos</p>
-                    </div>
+                    <img src="../assets/img/pavlova.png" alt="">
+                </div>                        
+                <div class = "texto-tarjeta">
+                    <h2 class="titulo-tarjeta">Pavlova Merengata</h2>
+                        <div class="info-tarjeta">
+                            <p>Crema, salsa de frutillas y merengue</p>
+                        </div>
                 </div>
-            </section>
             </div>
+            </section>
         </main>
         <footer class="social-footer">
             <div class="social-footer-left">
