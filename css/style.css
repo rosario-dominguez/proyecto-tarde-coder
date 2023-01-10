@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* 
+
+font-family: 'Italiana', serif;
+
+
+*/
+
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10vh;
+    background-color: #000000;
+    font-family: 'Italiana', serif;
+}
+
+.logo{
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size:22px;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 35%;
+}
+
+.nav-links li{
+    list-style:none;
+    
+}
+.nav-links a{
+    color: rgb(226,226,226);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight:bold;
+    font-size:14px;
+}
+
+.burger{
+    display:none;
+    cursor: pointer;
+}
+
+.burger div{
+    width:25px;
+    height:3px;
+    background-color:#fff;
+    margin: 5px;
+    transition: all 0.3s ease
+    
+}
+
+@media screen and (max-width:1024px){
+    .nav-links{
+    width:60%;
+    }
+}
+
+@media screen and (max-width:768px){
+    body{
+    overflow-x: hidden;
+    }
+    .nav-links{
+    position:absolute;
+    right:0px;
+    height:92vh;
+    top: 8vh;
+    background-color:rgb(48, 46, 46);
+    display:flex;
+    flex-direction: column;  
+    align-items: center;
+    width:50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    }
+    .nav-links li{
+    opacity: 0;
+    }
+    .burger{
+    display:block;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+    opacity:0;
+    transform: translateX(50px);
+    }
+    to{
+    opacity: 1;
+    transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-40deg) translate(-5px,6px);
+}
+
+.toggle .line2{
+    transform: rotate(90deg) translate(0px,0px);
+}
+
+.toggle .line3{
+    transform: rotate(35deg) translate(-5px,-6px);
+}
+
+.titulo h1{
+    background-color: black;
+    width: 100%;
+    font-family: 'Italiana', serif;
+    font-weight: 700;
+    font-size: 50px;
+    font-style: normal;
+    text-align: center;
+    float: left;
+    padding: 60px;
+    color:white
+}
+
+.cuerpo{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+.cuerpo p{
+    width: 100%;
+    background-color: black;
+    font-family: 'Italiana', serif;
+    font-weight: 600;
+    font-size: 30px;
+    font-style: normal;
+    text-align: center;
+    padding: 20px;
+    color:white
+}
+
+.cuerpo h2{
+    background-color: black;
+    font-family: 'Italiana', serif;
+    font-weight: 700;
+    font-size: 35px;
+    font-style: normal;
+    text-align: center;
+    padding: 30px;
+    color:white
+}
+
+.cuerpo img{
+    width: 100%;
+}
+
+.fondo{
+    background-color: black;
+}
+
+.container{
+    width: 100%;
+}
+
+.item1 img{
+position: absolute;
+width: 100%;
+}
+
+.item2 img{
+    position: relative;
+    width: 30%;
+    height: 60%;
+    top: 50px;
+    left: 60px;
+}
+
+div.imgSabores img{
+    position: relative;
+    margin-left: 700px;
+}
+
+.lista li{
+    background-color: black;
+    display: block;
+    justify-content: space-evenly;
+    overflow: hidden;
+    padding: 30px;
+}
+
+.lista a{
+    font-family: 'Italiana', serif;
+    font-weight: 600;
+    font-size: 30px;
+    font-style: normal;
+    text-orientation: sideways;
+    color:white
+}
