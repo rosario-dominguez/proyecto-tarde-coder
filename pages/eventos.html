@@ -10,16 +10,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
     <body>
-        <header>
+        <section class="sub-header">
             <nav>
-                <div class="navbar"> 
-                        <img class= "logo" src="../assets/img/menu.png" alt="">
-                        <div class="menu-icon" onclick="toggleMenu()">
-                        <i class="fa fa-bars"></i>
-                        </div>
-                    <ul class="nav-menu">
+                <a href="../index.html"><img src="../assets/img/logo-creta.png" alt="logo"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu ()"></i>
+                    <ul>
                         <li><a href="../index.html">Inicio</a></li>
                         <li><a href="../pages/sabores.html">Sabores</a></li>
                         <li><a href="../pages/eventos.html">Eventos</a></li>
@@ -27,40 +26,49 @@
                         <li><a href="../pages/nosotros.html">Nosotros</a></li>
                     </ul>
                 </div>
+                <i class="fa fa-bars" onclick="showMenu ()"></i>
             </nav>
-        </header>
-        <main>   
-            <div class = "fondo">
-                <section class = "titulo">
-                    <h1>Eventos</h1>
-                </section>
-                <section class = "cuerpo">
-                    <div>                
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique exercitationem natus veritatis reprehenderit adipisci consectetur vero quisquam incidunt aspernatur. Blanditiis similique voluptatum perferendis, at distinctio laboriosam sint aut voluptatem provident?</p> 
-                        <h2>Completar formulario para evento</h2>
+            <h1>Eventos</h1>
+        </section>
+        <main class="about-us">   
+            <div class = "row">
+                <div class="about-col">
+                    <h1>¡Tené nuestros helados en tu evento!</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique exercitationem natus veritatis reprehenderit adipisci consectetur vero quisquam incidunt aspernatur.<br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur odit nostrum nulla consequuntur mollitia, dolorum ipsum laborum.</p> 
+                    <div class="form">
+                        <a href="" class="button">Contactanos</a>
                     </div>
-                    <div>
-                        <img src="../assets/img/foto-eventos.png" alt="">
-                    </div>
-                </section>
+                </div>
+                <div class="about-col">
+                    <img src="../assets/img/foto-eventos.png" alt="camion de helados">
+                </div>
             </div>
-        </main>   
-            <footer class="social-footer">
-                <div class="social-footer-left">
-                    <a href="https://www.pedidosya.com.ar/restaurantes/vicente-lopez/creta-helados-artesanales-menu?search=creta">
-                        <img src="../assets/img/icono-pedidosya.png" alt=""></a>
-                        <p>Hacé tu pedido online</p>
-                </div>
-                <div class="social-footer-icons">
-                    <ul class="menu simple">
-                        <li><p>@cretahelados</p></li>
-                        <li><a href="https://www.facebook.com/cretaheladosartesanales"><i class="fa fa-facebook" aria-hidden="true"></i>
-                            <img src="../assets/img/icono-facebook.png" alt="">
-                        </a></li>
-                        <li><a href="https://www.instagram.com/cretahelados/"><i class="fa fa-instagram" aria-hidden="true"></i>
-                            <img src="../assets/img/icono-ig.jpg" alt=""></a></li>
-                    </ul>
-                </div>
-        </footer>
+        </main>
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            function showMenu(){
+                navLinks.style.right = "0";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200px";           
+            }
+        </script>
+        <section class="social-footer">
+            <div class="social-footer-left">
+                <a href="https://www.pedidosya.com.ar/restaurantes/vicente-lopez/creta-helados-artesanales-menu?search=creta">
+                    <img src="https://imgs.search.brave.com/-hdhwop1cj3KgUKdS0699RnB7o0uedicJQ1c1WACqmk/rs:fit:200:200:1/g:ce/aHR0cHM6Ly9saXZl/LnB5c3RhdGljLmNv/bS93ZWJhc3NldHMv/QXBwc2NvcmVXZWIv/bW9ub2xpdGgvNC4w/Ljg2L3B3YS9tYW5p/ZmVzdC9wZWRpZG9z/eWEvaWNvbnMvaWNv/bi0zODR4Mzg0LTUu/cG5n" alt=""></a>
+                    <p>Hacé tu pedido online</p>
+            </div>
+            <div class="social-footer-icons">
+                <ul class="menu-simple">
+                    <li><a href="https://www.facebook.com/cretaheladosartesanales">
+                        <i class="fa fa-facebook"></i>
+                    </a></li>
+                    <li><a href="https://www.instagram.com/cretahelados/">
+                        <i class="fa fa-instagram"></i>
+                    </a></li>
+                </ul>
+            </div>
+        </section>
     </body>
 </html>

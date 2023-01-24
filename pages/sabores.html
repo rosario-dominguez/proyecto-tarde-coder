@@ -10,16 +10,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
     <body>
-        <header>
+        <section class="sub-header">
             <nav>
-                <div class="navbar"> 
-                        <img class= "logo" src="../assets/img/menu.png" alt="">
-                        <div class="menu-icon" onclick="toggleMenu()">
-                        <i class="fa fa-bars"></i>
-                        </div>
-                    <ul class="nav-menu">
+                <a href="../index.html"><img src="../assets/img/logo-creta.png" alt="logo"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu ()"></i>
+                    <ul>
                         <li><a href="../index.html">Inicio</a></li>
                         <li><a href="../pages/sabores.html">Sabores</a></li>
                         <li><a href="../pages/eventos.html">Eventos</a></li>
@@ -27,122 +26,99 @@
                         <li><a href="../pages/nosotros.html">Nosotros</a></li>
                     </ul>
                 </div>
+                <i class="fa fa-bars" onclick="showMenu ()"></i>
             </nav>
-        </header>
+            <h1>Sabores</h1>
+        </section>
         <main>
-            <div class = "fondo">
-            <section class = "titulo">
-                <h1>Sabores</h1>
-                <p class = "cuerpo">¡Utilizamos los mejores ingredientes para hacer helado 100% artesanal!</p>
-            </section>
-            <section class="grid">
-                <div class= "tarjeta">
-                    <div class = "imgSabores">
-                        <img src="../assets/img/vainilla.png" alt="">
-                    </div>                        
-                    <div class = "texto-tarjeta">
-                        <h2 class="titulo-tarjeta">Vainilla</h2>
-                            <div class="info-tarjeta">
-                                <p>Con Vainilla de Madagascar</p>
-                            </div>
+            <section class="sabores-body">
+                <p class = "cuerpo">Utilizamos los mejores ingredientes para hacer helado 100% artesanal</p>
+            <div class="row">
+                <div class= "sabor-card-col">
+                    <img src="../assets/img/vainilla.png" alt="">
+                    <div class="sabor-card-text">
+                        <h3>Vainilla</h3>
+                        <p>Con Vainilla de Madagascar</p>
                     </div>
                 </div>
-                <div class= "tarjeta">
-                    <div class = "imgSabores">
-                        <img src="../assets/img/bananaSplit.png" alt="">
-                    </div>                        
-                    <div class = "texto-tarjeta">
-                        <h2 class="titulo-tarjeta">Banana Split</h2>
-                            <div class="info-tarjeta">
-                                <p>Con dulce de leche tradicional y trocitos de chocolate</p>
-                            </div>
+                <div class= "sabor-card-col">
+                    <img src="../assets/img/bananaSplit.png" alt="">
+                    <div class="sabor-card-text">
+                        <h3>Banana Split</h3>
+                        <p>Con dulce de leche tradicional y trocitos de chocolate</p>
                     </div>
                 </div>
-                <div class= "tarjeta">
-                    <div class = "imgSabores">
-                        <img src="../assets/img/cocoYddl.png" alt="">
-                    </div>                        
-                    <div class = "texto-tarjeta">
-                        <h2 class="titulo-tarjeta">Coco y Dulce de Leche</h2>
-                            <div class="info-tarjeta">
-                                <p>Con coco y dulce de leche tradicional</p>
-                            </div>
-                    </div>
-                </div>                  
-                <div class= "tarjeta">
-                    <div class = "imgSabores">
-                        <img src="../assets/img/cookiesAndCream.png" alt="">
-                    </div>                        
-                    <div class = "texto-tarjeta">
-                        <h2 class="titulo-tarjeta">Cookies and Cream</h2>
-                            <div class="info-tarjeta">
-                                <p>Crema americana con dulce de leche y Mini Oreos</p>
-                            </div>
-                    </div>
-                </div> 
-                <div class= "tarjeta">
-                    <div class = "imgSabores">
-                        <img src="../assets/img/nocciola.png" alt="">
-                    </div>                        
-                    <div class = "texto-tarjeta">
-                        <h2 class="titulo-tarjeta">Nocciola</h2>
-                            <div class="info-tarjeta">
-                                <p>Con avellanas y crocante de chocolate</p>
-                            </div>
-                    </div>
-                </div> 
-                <div class= "tarjeta">
-                    <div class = "imgSabores">
-                        <img src="../assets/img/menta.png" alt="">
-                    </div>                        
-                    <div class = "texto-tarjeta">
-                        <h2 class="titulo-tarjeta">Menta Granizada</h2>
-                            <div class="info-tarjeta">
-                                <p>Con trocitos de chocolate semiamargo</p>
-                            </div>
-                    </div>
-                </div> 
-                <div class= "tarjeta">
-                    <div class = "imgSabores">
-                        <img src="../assets/img/pistaccio.png" alt="">
-                    </div>                        
-                    <div class = "texto-tarjeta">
-                        <h2 class="titulo-tarjeta">Pistacchio</h2>
-                            <div class="info-tarjeta">
-                                <p>Con pistacchios de Sicilia</p>
-                            </div>
+                <div class= "sabor-card-col">
+                    <img src="../assets/img/cocoYddl.png" alt="">
+                    <div class="sabor-card-text">
+                        <h3>Coco y Dulce de Leche</h3>
+                        <p>Con coco y dulce de leche tradicional</p>
                     </div>
                 </div>
-            </div> 
-            <div class= "tarjeta">
-                <div class = "imgSabores">
-                    <img src="../assets/img/pavlova.png" alt="">
-                </div>                        
-                <div class = "texto-tarjeta">
-                    <h2 class="titulo-tarjeta">Pavlova Merengata</h2>
-                        <div class="info-tarjeta">
-                            <p>Crema, salsa de frutillas y merengue</p>
-                        </div>
+                <div class= "sabor-card-col">
+                    <img src="../assets/img/cookiesAndCream.png" alt="">
+                    <div class="sabor-card-text">
+                        <h3>Cookies and Cream</h3>
+                        <p>Crema americana con dulce de leche y Mini Oreos</p>
+                    </div>
                 </div>
             </div>
-            </section>
+            <div class="row">
+                <div class= "sabor-card-col">
+                    <img src="../assets/img/nocciola.png" alt="">
+                    <div class="sabor-card-text">
+                        <h3>Nocciola</h3>
+                        <p>Con avellanas y crocante de chocolate</p>
+                    </div>
+                </div>
+                <div class= "sabor-card-col">
+                    <img src="../assets/img/menta.png" alt="">
+                    <div class="sabor-card-text">
+                        <h3>Menta Granizada</h3>
+                        <p>Con trocitos de chocolate semiamargo</p>
+                    </div>
+                </div>
+                <div class= "sabor-card-col">
+                    <img src="../assets/img/pistaccio.png" alt="">
+                    <div class="sabor-card-text">
+                        <h3>Pistacchio</h3>
+                        <p>Con pistacchios de Sicilia</p>
+                    </div>
+                </div>
+                <div class= "sabor-card-col">
+                    <img src="../assets/img/pavlova.png" alt="">
+                    <div class="sabor-card-text">
+                        <h3>Pavlova Merengata</h3>
+                        <p>Crema, salsa de frutillas y merengue</p>
+                    </div>
+                </div>
+            </div>
         </main>
-        <footer class="social-footer">
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            function showMenu(){
+                navLinks.style.right = "0";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200px";           
+            }
+        </script>
+        <section class="social-footer">
             <div class="social-footer-left">
                 <a href="https://www.pedidosya.com.ar/restaurantes/vicente-lopez/creta-helados-artesanales-menu?search=creta">
-                    <img src="../assets/img/icono-pedidosya.png" alt=""></a>
+                    <img src="https://imgs.search.brave.com/-hdhwop1cj3KgUKdS0699RnB7o0uedicJQ1c1WACqmk/rs:fit:200:200:1/g:ce/aHR0cHM6Ly9saXZl/LnB5c3RhdGljLmNv/bS93ZWJhc3NldHMv/QXBwc2NvcmVXZWIv/bW9ub2xpdGgvNC4w/Ljg2L3B3YS9tYW5p/ZmVzdC9wZWRpZG9z/eWEvaWNvbnMvaWNv/bi0zODR4Mzg0LTUu/cG5n" alt=""></a>
                     <p>Hacé tu pedido online</p>
             </div>
             <div class="social-footer-icons">
-                <ul class="menu simple">
-                    <li><p>@cretahelados</p></li>
-                    <li><a href="https://www.facebook.com/cretaheladosartesanales"><i class="fa fa-facebook" aria-hidden="true"></i>
-                        <img src="../assets/img/icono-facebook.png" alt="">
+                <ul class="menu-simple">
+                    <li><a href="https://www.facebook.com/cretaheladosartesanales">
+                        <i class="fa fa-facebook"></i>
                     </a></li>
-                    <li><a href="https://www.instagram.com/cretahelados/"><i class="fa fa-instagram" aria-hidden="true"></i>
-                        <img src="../assets/img/icono-ig.jpg" alt=""></a></li>
+                    <li><a href="https://www.instagram.com/cretahelados/">
+                        <i class="fa fa-instagram"></i>
+                    </a></li>
                 </ul>
             </div>
-    </footer>
+        </section>
     </body>
 </html>
