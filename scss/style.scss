@@ -1,0 +1,13 @@
+@import "./base/reset";
+
+/* 
+font-family: 'Italiana', serif;
+*/
+
+@import "./layout/header";
+@import"./layout/main";
+@import"./components/buttons";
+@import"./layout/footer";
+
+/***/
+@import"./layout/media-tablet";

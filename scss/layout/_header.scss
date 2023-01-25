@@ -1,0 +1,77 @@
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(29, 30, 36, 0.7),rgba(29, 30, 36, 0.7)), url(https://images4.alphacoders.com/877/thumb-1920-877051.jpg);
+    background-position: center;
+    background-color: #000000;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+}
+
+nav img{
+    width: 180px;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Italiana', serif;
+    font-weight: 700;
+    font-size: 32px;
+    font-style: normal;
+    text-align: center;
+}
+
+.nav-links li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links li:hover::after{
+    width: 100%;
+}
+
+nav .fa{
+    display: none;
+}
+
+.sub-header{
+    height: 60vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(29, 30, 36, 0.7),rgba(29, 30, 36, 0.7)), url("C:/Users/charo/OneDrive/Desktop/TP Coder House/assets/img/banner.jpg");
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    font-family: 'Italiana', serif;
+}
+
+.sub-header h1{
+    margin-top: 100px;
+    font-size: 40px;
+}
