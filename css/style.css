@@ -61,7 +61,7 @@ nav .fa {
 .sub-header {
   height: 60vh;
   width: 100%;
-  background-image: linear-gradient(rgba(29, 30, 36, 0.7), rgba(29, 30, 36, 0.7)), url("C:/Users/charo/OneDrive/Desktop/TP Coder House/assets/img/banner.jpg");
+  background-image: linear-gradient(rgba(29, 30, 36, 0.7), rgba(29, 30, 36, 0.7)), url("../assets/img/banner.jpg");
   background-position: center;
   background-size: cover;
   text-align: center;
@@ -128,7 +128,7 @@ nav .fa {
   background-color: black; }
 
 .sabor-card-col {
-  flex-basis: 16%;
+  flex-basis: 20%;
   border-radius: 10px;
   margin-bottom: 30px;
   position: relative;
@@ -199,6 +199,70 @@ nav .fa {
   font-size: 20px;
   font-weight: 600; }
 
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px 100px;
+  font-family: 'Italiana', serif;
+  font-size: 20px;
+  font-weight: 600; }
+
+.container h2 {
+  color: #fff; }
+
+.container:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(29, 30, 36, 0.7), rgba(29, 30, 36, 0.7)), url("../assets/img/foto-formulario.png") no-repeat center;
+  background-size: cover;
+  z-index: -1;
+  filter: blur(50px); }
+
+.form-contacto {
+  max-width: 850px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+
+.left {
+  height: 100%;
+  background: url("../assets/img/foto-formulario.png") no-repeat center;
+  background-size: cover; }
+
+.right {
+  padding: 25px 40px; }
+
+.field {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: 2px solid rgba(29, 30, 36, 0.7);
+  background-color: rgba(230, 230, 230, 0.945);
+  font-size: 1.1rem;
+  font-family: 'Italiana', serif;
+  font-weight: 600;
+  margin-bottom: 22px;
+  transition: 0.3s; }
+
+.field:hover {
+  background-color: rgba(0, 0, 0, 0.1); }
+
+.field:focus {
+  background-color: #fff; }
+
+.area {
+  min-height: 150px; }
+
 .button {
   display: inline-block;
   text-decoration: none;
@@ -207,7 +271,10 @@ nav .fa {
   padding: 12px 34px;
   background: transparent;
   position: relative;
-  cursor: pointer; }
+  cursor: pointer;
+  font-family: 'Italiana', serif;
+  font-size: 30px;
+  font-weight: 600; }
 
 .button:hover {
   border: 1px solid #333;
@@ -300,9 +367,30 @@ nav .fa {
 
 @media (max-width: 700px) {
   .social-footer-left p {
-    font-size: 10px; }
+    font-size: 15px; }
   .social-footer-icons i {
     font-size: 20px; }
   .social-footer-left img {
     max-width: 20px;
     max-height: 20px; } }
+
+@media (max-width: 700px) {
+  .about-col h1 {
+    font-size: 20px; }
+  .about-col p {
+    font-size: 15px; }
+  .button {
+    font-size: 20px; }
+  .about-us {
+    background-image: linear-gradient(rgba(29, 30, 36, 0.7), rgba(29, 30, 36, 0.7)), url(https://images4.alphacoders.com/877/thumb-1920-877051.jpg); }
+  .about-col img {
+    display: none; }
+  .form-contacto {
+    grid-template-columns: 1fr; }
+  .left {
+    height: 200px;
+    width: 70%;
+    padding-left: 10px;
+    padding-right: 10px; }
+  .right {
+    width: 50%; } }

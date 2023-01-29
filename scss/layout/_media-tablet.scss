@@ -57,7 +57,7 @@
 
 @media(max-width: 700px){
     .social-footer-left p{
-        font-size: 10px;
+        font-size: 15px;
     }
     .social-footer-icons i{
         font-size: 20px;
@@ -67,3 +67,41 @@
         max-height: 20px;
     }
 }
+
+@media(max-width: 700px){
+    .about-col h1{
+        font-size: 20px;
+    }
+
+    .about-col p{
+        font-size: 15px;
+    }
+
+    .button{
+        font-size: 20px;
+    }
+
+    .about-us{
+        background-image: linear-gradient(rgba(29, 30, 36, 0.7),rgba(29, 30, 36, 0.7)), url(https://images4.alphacoders.com/877/thumb-1920-877051.jpg);
+    }
+
+    .about-col img{
+        display: none;
+    }
+
+    .form-contacto{
+        grid-template-columns: 1fr;
+    }
+
+    .left{
+        height: 200px;
+        width: 70%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .right{
+        width: 50%;
+    }
+}
+
